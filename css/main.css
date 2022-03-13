@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif; 
+}
+.container {
+    height: 100vh;
+    background-color:  hsl(217, 54%, 11%);  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding :20px;
+}
+.container .design {
+    width :320px;
+    max-width: 100%;
+    max-width :100%;
+    background-color: hsl(216, 50%, 16%);
+    padding:20px;
+    border-radius: 20px;
+}
+.container .design figure {
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+.container .design figure img {
+    width: 100%;
+    border-radius: 20px;
+}
+.container .design figure::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top :0;
+    left : 0;
+    border-radius: 20px;
+    background-color: rgba(0, 255, 255, 0.466);
+    z-index: 98;
+    transition: 0.3s;
+}
+.container .design figure::after {
+    content : url(../images/icon-view.svg);
+    position:absolute;
+    top : 50%; 
+    left : 50%; 
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition-delay: 0.3s;
+}
+.container .design figure:hover::before {
+width: 100%;
+}
+.container .design figure:hover::after {
+    z-index: 99;
+}
+.container .design > .title {
+font-size : 20px;
+color :  hsl(0, 0%, 100%);
+font-weight: 600;
+transition: 0.3s;
+}
+.container .design > .title:hover  {
+    color : cyan
+}
+.container .design > .description {
+    font-size: 17px;
+    color: hsl(215, 51%, 70%);
+    font-weight: 300;
+}
+.container .design .details {
+    display: flex;
+    justify-content: space-between;
+}
+.container .design .details > * {
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+}
+.container .design .details > div img {
+ margin-right: 10px;
+}
+.container .design .details .amount p {
+    color : cyan
+}
+.container .design .details .delay p {
+    color : hsl(215, 51%, 70%)
+}
+.container .design .avatar img {
+    width :50px;
+    border : solid 1px #ffffff;
+    border-radius: 50%;
+}
+.container .design .avatar p {
+    color : hsl(215, 51%, 70%)
+}
+.container .design .avatar p  span {
+    color : #ffffff;
+    transition: 0.3s;
+}
+.container .design .avatar p  span:hover {
+    color : cyan;
+}
